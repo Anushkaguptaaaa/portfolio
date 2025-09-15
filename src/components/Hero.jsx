@@ -26,6 +26,40 @@ const Hero = () => {
         ✨
       </motion.div>
       
+      {/* Additional Coquette Elements */}
+      <motion.div 
+        className="absolute top-40 left-[15%] text-4xl"
+        initial={{ opacity: 0, rotate: -10 }}
+        animate={{ opacity: 0.8, rotate: 0 }}
+        transition={{ delay: 0.9, duration: 1 }}
+      >
+        🎀
+      </motion.div>
+      <motion.div 
+        className="absolute top-[30%] right-[15%] text-4xl"
+        initial={{ opacity: 0, rotate: 10 }}
+        animate={{ opacity: 0.8, rotate: 0 }}
+        transition={{ delay: 1.1, duration: 1 }}
+      >
+        🧸
+      </motion.div>
+      <motion.div 
+        className="absolute bottom-[35%] left-[10%] text-4xl"
+        initial={{ opacity: 0, rotate: -5 }}
+        animate={{ opacity: 0.8, rotate: 0 }}
+        transition={{ delay: 1.3, duration: 1 }}
+      >
+        👾
+      </motion.div>
+      <motion.div 
+        className="absolute bottom-[25%] right-[10%] text-4xl"
+        initial={{ opacity: 0, rotate: 5 }}
+        animate={{ opacity: 0.8, rotate: 0 }}
+        transition={{ delay: 1.5, duration: 1 }}
+      >
+        👩🏻‍💻
+      </motion.div>
+      
       <div className="container mx-auto px-4 text-center">
         <motion.h1 
           className="text-5xl md:text-7xl font-bold mb-4 font-playfair"
@@ -58,7 +92,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <a 
-            href="/resume.pdf" 
+            href="https://drive.google.com/file/d/1-NkLbstMrNRkFv8KZ7FYsHlOGHrdGb3j/view?usp=drivesdk" 
             target="_blank" 
             rel="noopener noreferrer"
             className="coquette-button inline-block"

@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FiDownload } from 'react-icons/fi';
 
 const About = () => {
+  const [imageError, setImageError] = useState(false);
+  const [imageKey, setImageKey] = useState(Date.now());
+
+  // Force image reload when component mounts
+  useEffect(() => {
+    setImageKey(Date.now());
+  }, []);
+
   return (
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -26,11 +34,19 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="w-64 h-64 mx-auto overflow-hidden rounded-full border-4 border-lavender shadow-coquette">
-              <img 
-                src="https://via.placeholder.com/400x400?text=AG"
-                alt="Anushka Gupta" 
-                className="w-full h-full object-cover"
-              />
+              {imageError ? (
+                <div className="w-full h-full bg-rose-blush flex items-center justify-center text-white text-4xl font-bold">
+                  AG
+                </div>
+              ) : (
+                <img 
+                  key={imageKey}
+                  src={`/images/profile.jpg?v=${imageKey}`}
+                  alt="Anushka Gupta" 
+                  className="w-full h-full object-cover"
+                  onError={() => setImageError(true)}
+                />
+              )}
             </div>
           </motion.div>
           
@@ -64,7 +80,7 @@ const About = () => {
                   <div>
                     <p className="font-medium">Bachelor of Technology in Computer Science</p>
                     <p className="text-gray-600">DIT University, 2022-2026</p>
-                    <p className="text-sm">Current CGPA: 7.21</p>
+                    
                     <p className="text-sm">Coursework: Full-Stack Development and DevOps</p>
                   </div>
                 </div>
@@ -72,12 +88,12 @@ const About = () => {
               
               {/* Resume Button */}
               <a 
-                href="/resume.pdf" 
+                href="https://drive.google.com/file/d/1-NkLbstMrNRkFv8KZ7FYsHlOGHrdGb3j/view?usp=drivesdk" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="coquette-button inline-flex items-center"
               >
-                <FiDownload className="mr-2" /> Download Resume
+                <FiDownload className="mr-2" /> View Resume
               </a>
             </div>
           </motion.div>
