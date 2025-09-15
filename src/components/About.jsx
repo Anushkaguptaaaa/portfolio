@@ -27,13 +27,9 @@ const About = () => {
           >
             <div className="w-64 h-64 mx-auto overflow-hidden rounded-full border-4 border-lavender shadow-coquette">
               <img 
-                src="/images/profile.jpg" 
+                src="https://via.placeholder.com/400x400?text=AG"
                 alt="Anushka Gupta" 
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = "https://via.placeholder.com/400x400?text=AG";
-                }}
               />
             </div>
           </motion.div>
@@ -47,7 +43,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="coquette-card">
-              <h3 className="text-2xl font-playfair mb-4">Hello, I'm Anushka!</h3>
+              <h3 className="text-2xl font-bold mb-4 font-playfair">Hello, I'm Anushka!</h3>
               <p className="mb-4">
                 I'm a Full-Stack and App Developer with a passion for building beautiful, 
                 functional, and user-friendly applications. Currently pursuing my Bachelor's 

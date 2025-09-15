@@ -40,13 +40,9 @@ const ProjectCard = ({ project, index }) => {
       {/* Project Image */}
       <div className="relative">
         <img 
-          src={project.image} 
+          src={project.image}
           alt={project.title}
           className="w-full h-48 object-cover rounded-t-coquette"
-          onError={(e) => {
-            e.target.onerror = null;
-            e.target.src = `https://via.placeholder.com/400x200?text=${project.title}`;
-          }}
         />
         {project.featured && (
           <span className="absolute top-3 right-3 bg-rose-blush text-white text-xs px-2 py-1 rounded-full">
@@ -57,7 +53,7 @@ const ProjectCard = ({ project, index }) => {
       
       {/* Project Content */}
       <div className="p-5 flex flex-col flex-grow">
-        <h3 className="text-xl font-playfair font-bold mb-2">{project.title}</h3>
+        <h3 className="text-xl font-bold mb-2 font-playfair">{project.title}</h3>
         <p className="text-gray-600 text-sm mb-4 flex-grow">{project.description}</p>
         
         {/* Tech Tags */}

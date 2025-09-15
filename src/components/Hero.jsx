@@ -28,7 +28,7 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 text-center">
         <motion.h1 
-          className="text-5xl md:text-7xl font-playfair font-bold mb-4"
+          className="text-5xl md:text-7xl font-bold mb-4 font-playfair"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

@@ -82,7 +82,7 @@ const OpenSource = () => {
                     />
                   </div>
                   <div className="md:w-3/4">
-                    <h3 className="text-xl font-playfair font-bold mb-2">
+                    <h3 className="text-xl font-bold mb-2 font-playfair">
                       {contribution.organization}
                     </h3>
                     <p className="text-gray-600 mb-4">{contribution.description}</p>
@@ -108,7 +108,7 @@ const OpenSource = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h3 className="text-xl font-playfair font-bold mb-4">Technical Coordination</h3>
+            <h3 className="text-xl font-bold mb-4 font-playfair">Technical Coordination</h3>
             <div className="flex flex-col md:flex-row items-start gap-4">
               <div className="md:w-1/4">
                 <p className="font-medium">Youthopia</p>

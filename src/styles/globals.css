@@ -17,55 +17,59 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  @apply font-poppins bg-white text-gray-800;
+@layer base {
+  body {
+    @apply font-poppins bg-white text-gray-800;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-playfair;
+  }
 }
 
-h1, h2, h3, h4, h5 {
-  @apply font-playfair;
-}
+@layer components {
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-center relative;
+  }
 
-.section-title {
-  @apply text-3xl md:text-4xl font-bold mb-8 text-center relative;
-}
+  .section-title::after {
+    content: "";
+    @apply block w-20 h-1 bg-rose-blush mx-auto mt-2;
+  }
 
-.section-title::after {
-  content: "";
-  @apply block w-20 h-1 bg-rose-blush mx-auto mt-2;
-}
+  .coquette-card {
+    @apply bg-white rounded-coquette shadow-coquette p-6 transition-all duration-300 hover:shadow-lg;
+  }
 
-.coquette-card {
-  @apply bg-white rounded-coquette shadow-coquette p-6 transition-all duration-300 hover:shadow-lg;
-}
+  .coquette-button {
+    @apply px-6 py-3 bg-rose-blush text-white rounded-full shadow-soft transition-all duration-300 hover:bg-pink-soft hover:shadow-md;
+  }
 
-.coquette-button {
-  @apply px-6 py-3 bg-rose-blush text-white rounded-full shadow-soft transition-all duration-300 hover:bg-pink-soft hover:shadow-md;
-}
+  .coquette-input {
+    @apply w-full px-4 py-2 border border-lavender rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-blush;
+  }
 
-.coquette-input {
-  @apply w-full px-4 py-2 border border-lavender rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-blush;
-}
+  .skill-badge {
+    @apply px-4 py-2 bg-lavender text-gray-700 rounded-full text-sm font-medium m-1;
+  }
 
-.skill-badge {
-  @apply px-4 py-2 bg-lavender text-gray-700 rounded-full text-sm font-medium m-1;
-}
+  .decorative-element {
+    @apply text-rose-blush opacity-50;
+  }
 
-.decorative-element {
-  @apply text-rose-blush opacity-50;
-}
+  .project-card {
+    @apply overflow-hidden bg-white rounded-coquette shadow-coquette;
+  }
 
-.project-card {
-  @apply coquette-card overflow-hidden;
-}
+  .project-card img {
+    @apply rounded-t-coquette w-full h-48 object-cover;
+  }
 
-.project-card img {
-  @apply rounded-t-coquette w-full h-48 object-cover;
-}
+  .project-links a {
+    @apply text-rose-blush hover:text-pink-soft transition-colors mr-4;
+  }
 
-.project-links a {
-  @apply text-rose-blush hover:text-pink-soft transition-colors mr-4;
-}
-
-.tech-tags span {
-  @apply inline-block bg-lavender text-xs px-2 py-1 rounded-full mr-2 mb-2;
+  .tech-tags span {
+    @apply inline-block bg-lavender text-xs px-2 py-1 rounded-full mr-2 mb-2;
+  }
 }

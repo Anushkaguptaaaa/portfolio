@@ -10,8 +10,8 @@ export const projects = [
     ],
     technologies: ['PERN Stack', 'AI SaaS', 'Gemini API', 'ClipDrop API', 'Clerk', 'Stripe', 'PostgreSQL', 'Cloudinary'],
     image: '/images/quick-ai.jpg',
-    demoLink: '#',
-    githubLink: '#',
+    demoLink: 'https://quick-ai.vercel.app',
+    githubLink: 'https://github.com/Anushkaguptaaaa/quick-ai',
     featured: true
   },
   {
@@ -25,8 +25,8 @@ export const projects = [
     ],
     technologies: ['MERN Stack', 'Hotel Booking', 'Stripe', 'Nodemailer', 'Cloudinary', 'MongoDB'],
     image: '/images/quickstay.jpg',
-    demoLink: '#',
-    githubLink: '#',
+    demoLink: 'https://quickstay.vercel.app',
+    githubLink: 'https://github.com/Anushkaguptaaaa/quickstay',
     featured: true
   },
   {
@@ -39,7 +39,7 @@ export const projects = [
     ],
     technologies: ['TypeScript', 'Cat API', 'Responsive Design', 'Web App'],
     image: '/images/kahu.jpg',
-    demoLink: '',
+    demoLink: 'https://kahu.vercel.app',
     githubLink: 'https://github.com/Anushkaguptaaaa/kahu',
     featured: false
   }
