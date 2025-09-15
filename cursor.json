@@ -1,0 +1,100 @@
+{
+  "version": "1.0.0",
+  "rules": [
+    {
+      "name": "Consistent Component Structure",
+      "description": "All React components should follow the same structure with imports, component definition, and exports",
+      "pattern": "import React from 'react';\n\nconst ComponentName = () => {\n  return (\n    <div>\n      {/* Component content */}\n    </div>\n  );\n};\n\nexport default ComponentName;",
+      "severity": "warning"
+    },
+    {
+      "name": "Tailwind Classes Organization",
+      "description": "Tailwind classes should be organized by category (layout, spacing, colors, typography)",
+      "pattern": "className=\"[layout classes] [spacing classes] [color classes] [typography classes]\"",
+      "severity": "info"
+    },
+    {
+      "name": "Framer Motion Animations",
+      "description": "Use consistent animation patterns with Framer Motion",
+      "pattern": "const variants = {\n  hidden: { opacity: 0 },\n  visible: { opacity: 1, transition: { duration: 0.5 } }\n};\n\n<motion.div initial=\"hidden\" animate=\"visible\" variants={variants}></motion.div>",
+      "severity": "info"
+    },
+    {
+      "name": "Color Palette Enforcement",
+      "description": "Use only the defined pastel color palette",
+      "pattern": "bg-(pink|rose|cream|lavender|gold)-\\d+",
+      "severity": "warning"
+    },
+    {
+      "name": "Image Optimization",
+      "description": "All images should use Next.js Image component with proper optimization",
+      "pattern": "<Image\n  src=\"/path/to/image.jpg\"\n  alt=\"Descriptive alt text\"\n  width={500}\n  height={300}\n  className=\"rounded-lg\"\n  priority={false}\n  loading=\"lazy\"\n/>",
+      "severity": "error"
+    },
+    {
+      "name": "SEO Metadata",
+      "description": "Each page should include proper SEO metadata",
+      "pattern": "<Head>\n  <title>Page Title | Anushka Gupta</title>\n  <meta name=\"description\" content=\"Page description\" />\n  <meta property=\"og:title\" content=\"Page Title | Anushka Gupta\" />\n  <meta property=\"og:description\" content=\"Page description\" />\n  <meta property=\"og:image\" content=\"/path/to/og-image.jpg\" />\n</Head>",
+      "severity": "error"
+    },
+    {
+      "name": "Responsive Design",
+      "description": "All components should use responsive design with mobile-first approach",
+      "pattern": "className=\"md:flex md:flex-row flex-col\"",
+      "severity": "warning"
+    },
+    {
+      "name": "Consistent Typography",
+      "description": "Use defined typography classes for consistent text styling",
+      "pattern": "font-(playfair|fraunces|poppins|inter)",
+      "severity": "info"
+    },
+    {
+      "name": "Component Props Documentation",
+      "description": "All component props should be documented with JSDoc",
+      "pattern": "/**\n * ComponentName description\n * @param {PropType} propName - Description of the prop\n * @returns {JSX.Element} Component\n */",
+      "severity": "warning"
+    },
+    {
+      "name": "Data Structure",
+      "description": "Data files should follow consistent structure",
+      "pattern": "export const dataName = [\n  {\n    id: 'unique-id',\n    title: 'Title',\n    // Other properties\n  },\n  // More items\n];",
+      "severity": "warning"
+    },
+    {
+      "name": "Animation Performance",
+      "description": "Use will-change and hardware acceleration for animations",
+      "pattern": "className=\"transform will-change-transform\"",
+      "severity": "info"
+    },
+    {
+      "name": "Accessibility",
+      "description": "Ensure all interactive elements have proper accessibility attributes",
+      "pattern": "<button\n  aria-label=\"Button description\"\n  role=\"button\"\n  tabIndex={0}\n>",
+      "severity": "error"
+    },
+    {
+      "name": "Contact Form Validation",
+      "description": "Implement proper form validation for contact form",
+      "pattern": "const [errors, setErrors] = useState({});\n\nconst validate = (values) => {\n  // Validation logic\n};",
+      "severity": "error"
+    },
+    {
+      "name": "Project Card Structure",
+      "description": "Project cards should follow consistent structure",
+      "pattern": "<div className=\"project-card\">\n  <Image />\n  <h3>Project Title</h3>\n  <p>Project description</p>\n  <div className=\"tech-tags\">\n    {/* Tech tags */}\n  </div>\n  <div className=\"project-links\">\n    <a href=\"github-link\">GitHub</a>\n    <a href=\"demo-link\">Demo</a>\n  </div>\n</div>",
+      "severity": "warning"
+    },
+    {
+      "name": "Smooth Scrolling",
+      "description": "Implement smooth scrolling for navigation",
+      "pattern": "const scrollToSection = (elementId) => {\n  document.getElementById(elementId).scrollIntoView({\n    behavior: 'smooth'\n  });\n};",
+      "severity": "info"
+    }
+  ],
+  "ignorePatterns": [
+    "node_modules/**",
+    ".next/**",
+    "public/**"
+  ]
+}

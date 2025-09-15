@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Fraunces:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pink-soft: #FFC0CB;
+  --pink-light: #FFD1DC;
+  --rose-blush: #F8B3C5;
+  --cream: #FFFDD0;
+  --lavender: #E6E6FA;
+  --gold-subtle: #D4AF37;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-poppins bg-white text-gray-800;
+}
+
+h1, h2, h3, h4, h5 {
+  @apply font-playfair;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-bold mb-8 text-center relative;
+}
+
+.section-title::after {
+  content: "";
+  @apply block w-20 h-1 bg-rose-blush mx-auto mt-2;
+}
+
+.coquette-card {
+  @apply bg-white rounded-coquette shadow-coquette p-6 transition-all duration-300 hover:shadow-lg;
+}
+
+.coquette-button {
+  @apply px-6 py-3 bg-rose-blush text-white rounded-full shadow-soft transition-all duration-300 hover:bg-pink-soft hover:shadow-md;
+}
+
+.coquette-input {
+  @apply w-full px-4 py-2 border border-lavender rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-blush;
+}
+
+.skill-badge {
+  @apply px-4 py-2 bg-lavender text-gray-700 rounded-full text-sm font-medium m-1;
+}
+
+.decorative-element {
+  @apply text-rose-blush opacity-50;
+}
+
+.project-card {
+  @apply coquette-card overflow-hidden;
+}
+
+.project-card img {
+  @apply rounded-t-coquette w-full h-48 object-cover;
+}
+
+.project-links a {
+  @apply text-rose-blush hover:text-pink-soft transition-colors mr-4;
+}
+
+.tech-tags span {
+  @apply inline-block bg-lavender text-xs px-2 py-1 rounded-full mr-2 mb-2;
+}
